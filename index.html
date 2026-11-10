@@ -246,8 +246,8 @@ footer b{color:var(--text)}
   <div class="wrap">
     <div class="head">
       <span class="eyebrow reveal">Personalidad</span>
-      <h2 class="reveal d1">Pídele una cara. La pone al tiro.</h2>
-      <p class="lead reveal d2">«Muéstrame tu cara de enojado», «ponte de gato», «cara de niña»… Techi tiene 15 caras y cambia de ánimo mientras conversa contigo.</p>
+      <h2 class="reveal d1">Expresivo, cercano y con carácter propio.</h2>
+      <p class="lead reveal d2">Techi acompaña cada conversación con 15 expresiones que reflejan su estado de ánimo. Basta con pedírselo —«muéstrame tu cara de feliz», «ponte de gato»— y responde con la expresión adecuada.</p>
     </div>
     <div class="moods" id="moods"></div>
   </div>
@@ -300,9 +300,10 @@ footer b{color:var(--text)}
     </div>
   </div>
   <div class="wrap ashots">
-    <img class="reveal" src="img/android_chat.png" alt="Techi en Android: chat" loading="lazy" onerror="this.remove()">
-    <img class="reveal d1" src="img/android_capsula.png" alt="Techi en Android: cápsula en la cámara" loading="lazy" onerror="this.remove()">
-    <img class="reveal d2" src="img/android_ajustes.png" alt="Techi en Android: ajustes" loading="lazy" onerror="this.remove()">
+    <img class="reveal" src="img/android_capsula.jpg" alt="Techi en Android: la cápsula de la cámara abierta, escuchando, y el widget" loading="lazy" onerror="this.remove()">
+    <img class="reveal d1" src="img/android_inicio.jpg" alt="Techi en Android: pantalla principal con el estado del teléfono" loading="lazy" onerror="this.remove()">
+    <img class="reveal d2" src="img/android_agenda.jpg" alt="Techi en Android: agua del día y recordatorios" loading="lazy" onerror="this.remove()">
+    <img class="reveal d3" src="img/android_enfoque.jpg" alt="Techi en Android: pomodoro, temporizador y alarma" loading="lazy" onerror="this.remove()">
   </div>
 </section>
 
@@ -349,7 +350,7 @@ footer b{color:var(--text)}
       <div>
         <span class="eyebrow" style="color:var(--amber)">Apoya el proyecto</span>
         <h2 style="margin:10px 0 12px">Invítale un café a Techi ☕</h2>
-        <p class="lead">Techi es gratis y lo hace una sola persona: Maikel Perera, de Tech Solutions. Con tu aporte pago el desarrollo, las mejoras y la construcción del robot Techi de verdad.</p>
+        <p class="lead">Techi es gratuito y lo desarrolla Maikel Perera en Tech Solutions, Valparaíso. Tu aporte financia nuevas funciones, mejoras continuas y la construcción del robot Techi.</p>
         <div class="cta" id="payBtns"></div>
         <p class="note" style="margin-top:14px">El pago lo procesa la plataforma que elijas. Tech Solutions nunca ve los datos de tu tarjeta.</p>
       </div>
@@ -465,7 +466,7 @@ const FEATS = [
   [ic('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>', "#38bdf8", "#0284c7"), "Llamadas y WhatsApp", "Escribe y llama a tus contactos. Si no tiene el número, te lo pide una vez y lo recuerda.", "«Mándale un mensaje a mamá que llego tarde»"],
   [ic('<path d="M12 2 2 22h20L12 2z"/><path d="M12 9v5M12 18h.01"/>', "#fb7185", "#e11d48"), "Emergencias y hogar", "Qué hacer si huele a gas, si tiembla, una quemadura, un baño tapado o una mancha difícil.", "«¿Qué hago si huele a gas?»"],
   [ic('<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>', "#fbbf24", "#d97706"), "Humor y conversación", "Chistes, opiniones, gustos propios y respuestas distintas cada vez. Nunca suena a robot.", "«Me gustan las cachapas, ¿a ti?»"],
-  [ic('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>', "#22d3ee", "#0891b2"), "Privado de verdad", "Tu voz se entiende dentro de tu equipo. Tus datos se quedan en tu PC o tu teléfono.", "Sin cuentas, sin nube"],
+  [ic('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>', "#22d3ee", "#0891b2"), "Privacidad por diseño", "El reconocimiento de voz se procesa localmente en tu dispositivo. Tu información personal se almacena solo en tu equipo, sin cuentas ni servidores de terceros.", "Sin registro ni almacenamiento en la nube"],
   [ic('<path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/>', "#86efac", "#16a34a"), "Modo niños", "Con PIN de adulto: más juguetón, voz de niño, y bloquea apagar, borrar o escribir mensajes.", "Chistes y adivinanzas para peques"]
 ];
 document.getElementById("feats").innerHTML = FEATS.map((f, i) =>
