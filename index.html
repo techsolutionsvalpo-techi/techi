@@ -292,8 +292,8 @@ footer b{color:var(--text)}
     </div>
     <div>
       <span class="eyebrow reveal">Android</span>
-      <h2 class="reveal d1" style="margin:12px 0 16px">Vive alrededor de tu cámara.</h2>
-      <p class="lead reveal d2">En el teléfono, Techi se esconde en una cápsula junto a la cámara. La tocas, se despliega, te escucha y se vuelve a esconder. Desde cualquier app.</p>
+      <h2 class="reveal d1" style="margin:12px 0 16px">Siempre a un toque.</h2>
+      <p class="lead reveal d2">En el teléfono, Techi se esconde en una cápsula arriba de tu pantalla. La tocas, se despliega, te escucha y se vuelve a esconder. Desde cualquier app.</p>
       <ul class="list reveal d3">
         <li>Llama y manda WhatsApp a tus contactos sin guardar números en Techi.</li>
         <li>Anota tus eventos en el calendario y te avisa un día antes.</li>
@@ -329,9 +329,9 @@ footer b{color:var(--text)}
       <div class="dlc reveal d1">
         <h3>📱 Android</h3>
         <span class="ver" id="verAnd">Android 8 o superior</span>
-        <ul><li>Abre el .apk en tu teléfono y toca Instalar.</li><li>Pesa unos 46 MB porque trae su propio oído.</li><li>¿No se instala? Prueba la <b>versión básica</b>.</li></ul>
+        <ul><li>Abre el .apk descargado y toca <b>Instalar</b>.</li><li>Abre Techi y toca <b>Permitir</b> en cada ventana. ¡Listo!</li><li>Pesa unos 46 MB porque trae su propio oído.</li></ul>
         <a class="btn btn-main" id="dlAnd" href="#">Descargar para Android</a>
-        <a class="note" id="dlAndB" href="#" style="text-decoration:underline">Versión básica (para teléfonos que bloquean la instalación)</a>
+        <span class="note">No hace falta apagar Play Protect ni cambiar ajustes de seguridad.</span>
       </div>
     </div>
   </div>
@@ -370,7 +370,7 @@ footer b{color:var(--text)}
       <details class="reveal"><summary>¿Cuánto cuesta?</summary><p>Hoy es gratis. Si te gusta, puedes invitarle un café para apoyar el proyecto.</p></details>
       <details class="reveal"><summary>¿Cuánto consume mi PC?</summary><p>Techi usa unos 55 MB y casi nada de procesador cuando está tranquilo. Su voz (unos 240 MB) y su oído (300 a 500 MB) se cargan cuando conversas y se liberan solos tras unos minutos sin hablar o cuando juegas. Puedes preguntarle «¿cuánto consumes?».</p></details>
       <details class="reveal"><summary>¿Cómo se actualiza?</summary><p>Solo. En PC descarga la versión nueva en segundo plano y se instala la próxima vez que lo abres. En Android la descarga y te pide tocar «Instalar» (Android siempre lo pide). Cada actualización va firmada: si alguien la altera, Techi no la instala.</p></details>
-      <details class="reveal"><summary>Mi teléfono no deja instalar el APK</summary><p>Prueba esto: 1) desinstala cualquier Techi antiguo (también en «Segundo espacio» o «Apps duplicadas»); 2) en Play Protect toca «Más detalles» › «Instalar de todas formas»; 3) en Huawei desactiva el «Modo puro»; 4) si aún falla, descarga la versión básica, que no pide permisos especiales.</p></details>
+      <details class="reveal"><summary>Mi teléfono no deja instalar el APK</summary><p>Prueba esto: 1) descarga Techi de nuevo desde esta página (la versión 1.9.1 o más nueva ya no pide permisos especiales); 2) si tenías un Techi antiguo, desinstálalo primero (también en «Segundo espacio» o «Apps duplicadas»); 3) si Play Protect muestra un aviso de app desconocida, toca «Más detalles» › «Instalar de todas formas». Nunca hace falta apagar Play Protect. 4) En Huawei, desactiva el «Modo puro». Si aún no se instala, escríbenos por WhatsApp.</p></details>
       <details class="reveal"><summary>¿Quién hizo a Techi?</summary><p>Maikel Perera, de Tech Solutions, en Valparaíso, Chile. Soporte por WhatsApp +56 9 2231 0609 o Instagram @techsolutions.valpo.</p></details>
     </div>
   </div>
@@ -379,7 +379,7 @@ footer b{color:var(--text)}
 <footer>
   <div class="wrap">
     <span>Creado por <b>Maikel Perera</b> · Tech Solutions · Valparaíso, Chile</span>
-    <span><a href="https://www.instagram.com/techsolutions.valpo" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/56922310609" target="_blank" rel="noopener">WhatsApp</a></span>
+    <span><a href="https://www.instagram.com/techsolutions.valpo" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/56922310609" target="_blank" rel="noopener">WhatsApp</a> · <a href="privacidad.html">Privacidad</a></span>
   </div>
 </footer>
 
@@ -398,7 +398,6 @@ const PAGOS = [
 const base = `https://github.com/${GITHUB_USUARIO}/${GITHUB_REPO}/releases/latest/download/`;
 document.getElementById("dlWin").href = base + "Techi_Windows.zip";
 document.getElementById("dlAnd").href = base + "Techi_Android.apk";
-document.getElementById("dlAndB").href = base + "Techi_Android_Basico.apk";
 
 // Versiones publicadas (se leen del mismo archivo que usa la app para actualizarse)
 fetch("version.json", {cache: "no-store"}).then(r => r.json()).then(v => {
