@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Techi · Tu compañero para PC y Android</title>
-<meta name="description" content="Techi es un compañero con inteligencia y personalidad que vive en tu PC y en tu teléfono. Te escucha, te habla, cuida tu equipo y funciona sin enviar tu voz a internet. Creado por Maikel Perera · Tech Solutions.">
+<meta name="description" content="Techi es un compañero con inteligencia y personalidad que vive en tu PC y en tu teléfono. Te escucha, te habla, cuida tu equipo y funciona sin enviar tu voz a internet. Creado por Maikel Perera · TechSolutions.valpo.">
 <link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,6 +121,24 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .feat p{color:var(--soft);font-size:14.5px}
 .feat .ex{margin-top:12px;font-size:13px;color:var(--cyan);font-style:italic}
 
+.note.warnapp{color:#fbbf24;border:1px solid rgba(251,191,36,.4);background:rgba(251,191,36,.08);border-radius:12px;padding:10px 12px}
+/* ---------- qué le pido ---------- */
+.nov{color:var(--soft);font-size:14px;line-height:1.55}
+.cmds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.cmds{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cmds{grid-template-columns:1fr}}
+.cmd{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+.cmd h3{font-size:16.5px;margin-bottom:10px}
+.cmd ul{list-style:none;display:grid;gap:7px}
+.cmd li{font-size:14px;color:var(--cyan);font-style:italic;line-height:1.4}
+.cmd li::before{content:"«"} .cmd li::after{content:"»"}
+.vox{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+@media (max-width:760px){.vox{grid-template-columns:1fr}}
+.vox .feat ol{color:var(--soft);font-size:14.5px;padding-left:20px;display:grid;gap:6px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
+.chips span{font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--soft)}
+.chips .m{border-color:rgba(96,165,250,.45)} .chips .f{border-color:rgba(244,114,182,.45)}
+
 /* ---------- capturas ---------- */
 .shots{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start}
 .shots .stack{display:grid;gap:20px}
@@ -236,10 +254,10 @@ footer b{color:var(--text)}
   <div class="wrap">
     <a class="brand" href="#">
       <span class="mini"><svg width="18" height="14" viewBox="0 0 18 14"><rect x="1" y="1" width="6" height="11" rx="2.5" fill="#1e90ff"/><rect x="11" y="1" width="6" height="11" rx="2.5" fill="#1e90ff"/></svg></span>
-      Techi <small>· Tech Solutions</small>
+      Techi <small>· TechSolutions.valpo</small>
     </a>
     <div class="navlinks">
-      <a href="#caras">Caras</a><a href="#funciones">Qué hace</a><a href="#android">Android</a><a href="#descargar">Descargar</a><a href="#apoyar">Apoyar</a>
+      <a href="#caras">Caras</a><a href="#funciones">Qué hace</a><a href="#comandos">Qué pedirle</a><a href="#voces">Voces</a><a href="#android">Android</a><a href="#novedades">Novedades</a><a href="#descargar">Descargar</a><a href="#apoyar">Apoyar</a>
     </div>
     <a class="btn btn-main" href="#descargar" style="padding:10px 18px;font-size:14px">Descargar gratis</a>
   </div>
@@ -249,7 +267,7 @@ footer b{color:var(--text)}
 <header class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow reveal">● Hecho en Valparaíso, Chile</span>
+      <span class="eyebrow reveal">● Creado por Maikel Perera · TechSolutions.valpo · Valparaíso, Chile</span>
       <h1 class="reveal d1" style="margin-top:14px">Tu compañero que <span class="grad">vive en tu PC</span> y en tu teléfono.</h1>
       <p class="lead reveal d2">Techi te escucha, te habla con voz natural, cuida tu computador, te recuerda las cosas, te pone música y te saca una risa. Y lo mejor: tu voz se entiende dentro de tu equipo, nunca se sube a internet.</p>
       <div class="cta reveal d3">
@@ -300,6 +318,52 @@ footer b{color:var(--text)}
       <p class="lead reveal d2">No hace falta aprenderse comandos: entiende muchas formas de decir lo mismo, y si el micrófono escucha mal, adivina lo que quisiste decir.</p>
     </div>
     <div class="feats" id="feats"></div>
+  </div>
+</section>
+
+<!-- ============ QUÉ LE PIDO ============ -->
+<section id="comandos">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">¿Para qué sirve?</span>
+      <h2 class="reveal d1">Qué le puedes pedir.</h2>
+      <p class="lead reveal d2">Techi es un compañero para el día a día: te ayuda con tu computador y tu teléfono, te organiza, te acompaña y te saca una sonrisa. Di «Techi» y luego lo que necesitas, con tus palabras. Estos son solo ejemplos.</p>
+    </div>
+    <div class="cmds" id="cmds"></div>
+  </div>
+</section>
+
+<!-- ============ VOCES ============ -->
+<section id="voces" style="padding-top:10px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Voces</span>
+      <h2 class="reveal d1">Elige cómo te habla.</h2>
+      <p class="lead reveal d2">Todas las voces son gratis, sintéticas y funcionan sin internet.</p>
+    </div>
+    <div class="vox">
+      <div class="feat reveal">
+        <h3>🖥 En el PC: 15 voces naturales</h3>
+        <div class="chips">
+          <span class="m">Mateo</span><span class="m">Tomás</span><span class="m">Diego</span><span class="m">Andrés</span><span class="m">Bruno</span><span class="m">Leo</span><span class="m">Gael</span><span class="m">Simón</span>
+          <span class="f">Valentina</span><span class="f">Sofía</span><span class="f">Camila</span><span class="f">Isabela</span><span class="f">Lucía</span><span class="f">Emilia</span><span class="f">Renata</span>
+        </div>
+        <ol>
+          <li>Abre Techi › <b>Ajustes</b> › <b>Voz y escucha</b>.</li>
+          <li>Toca una voz (azules: de hombre · rosadas: de mujer) y luego <b>▶ Probar voz</b>.</li>
+          <li>O díselo: <i>«Techi, pon voz de mujer»</i>, <i>«pon la voz de Diego»</i> o <i>«cambia tu voz»</i>.</li>
+        </ol>
+      </div>
+      <div class="feat reveal d1">
+        <h3>📱 En Android: las voces de tu teléfono</h3>
+        <p>Techi habla con el motor de voz de tu propio teléfono, así que tienes las voces que traiga (muchas son de hombre y de mujer).</p>
+        <ol>
+          <li>Abre Techi › <b>Ajustes</b> › <b>Voz de Techi</b> y toca una voz.</li>
+          <li>¿Voz de hombre? Elige <b>Tono › Grave (hombre)</b> o dile <i>«Techi, pon voz de hombre»</i>.</li>
+          <li>¿Más voces gratis? <b>Más voces del teléfono</b> › Motor de Google › Instalar datos de voz › Español.</li>
+        </ol>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -383,22 +447,23 @@ footer b{color:var(--text)}
     <div class="head">
       <span class="eyebrow reveal">Descargar</span>
       <h2 class="reveal d1">Llévate a Techi.</h2>
-      <p class="lead reveal d2">Gratis. Se actualiza solo: cada versión nueva viene firmada por Tech Solutions y Techi revisa la firma antes de instalarla.</p>
+      <p class="lead reveal d2">Gratis. Se actualiza solo: cada versión nueva viene firmada por TechSolutions.valpo y Techi revisa la firma antes de instalarla.</p>
     </div>
     <div class="dl">
       <div class="dlc reveal" id="dl-windows">
         <h3>🖥 Windows</h3>
         <span class="ver" id="verWin">Windows 10 y 11</span>
-        <ul><li>Descomprime el .zip y abre <b>Techi.exe</b>.</li><li>Funciona sin internet (clima y búsquedas lo usan).</li><li>Unos 350 MB; 8 GB de RAM recomendados.</li></ul>
+        <ul><li>Descomprime el .zip y abre <b>Techi.exe</b>.</li><li>Funciona sin internet (clima y búsquedas lo usan).</li><li>Unos 350 MB. Su IA (0,5 a 1,1 GB) se descarga sola la primera vez.</li><li>Funciona desde 4 GB de RAM; 8 GB recomendados.</li></ul>
         <a class="btn btn-main" id="dlWin" href="#">Descargar para Windows</a>
         <span class="note">Si Windows dice «protegió su PC»: «Más información» › «Ejecutar de todas formas». Pasa con programas nuevos sin firma de pago.</span>
       </div>
       <div class="dlc reveal d1" id="dl-android">
         <h3>📱 Android</h3>
         <span class="ver" id="verAnd">Android 8 o superior</span>
-        <ul><li>Abre el .apk descargado y toca <b>Instalar</b>.</li><li>Abre Techi y toca <b>Permitir</b> en cada ventana. ¡Listo!</li><li>Pesa unos 46 MB porque trae su propio oído.</li></ul>
+        <ul><li>Abre el .apk descargado y toca <b>Instalar</b>.</li><li>Abre Techi y toca <b>Permitir</b> en cada ventana. ¡Listo!</li><li>Pesa unos 64 MB porque trae su propio oído y su motor de IA. La IA (0,5 a 1,1 GB) se descarga sola con Wi-Fi.</li></ul>
         <a class="btn btn-main" id="dlAnd" href="#">Descargar para Android</a>
         <span class="note">No hace falta apagar Play Protect ni cambiar ajustes de seguridad.</span>
+        <span class="note warnapp" id="inAppWarn" hidden>⚠ Estás en el navegador de TikTok, Instagram o Facebook: ahí el archivo suele bajar dañado («el paquete no es válido»). Toca ⋯ y elige <b>«Abrir en el navegador»</b> (Chrome) antes de descargar.</span>
       </div>
     </div>
   </div>
@@ -420,10 +485,29 @@ footer b{color:var(--text)}
       <div>
         <span class="eyebrow" style="color:var(--amber)">Apoya el proyecto</span>
         <h2 style="margin:10px 0 12px">Invítale un café a Techi ☕</h2>
-        <p class="lead">Techi es gratuito y lo desarrolla Maikel Perera en Tech Solutions, Valparaíso. Tu aporte financia nuevas funciones, mejoras continuas y la construcción del robot Techi.</p>
+        <p class="lead">Techi es gratuito y lo desarrolla Maikel Perera en TechSolutions.valpo, Valparaíso. Tu aporte financia nuevas funciones, mejoras continuas y la construcción del robot Techi.</p>
         <div class="cta" id="payBtns"></div>
-        <p class="note" style="margin-top:14px">El pago lo procesa la plataforma que elijas. Tech Solutions nunca ve los datos de tu tarjeta.</p>
+        <p class="note" style="margin-top:14px">El pago lo procesa la plataforma que elijas. TechSolutions.valpo nunca ve los datos de tu tarjeta.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOVEDADES ============ -->
+<section id="novedades" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Actualizaciones</span>
+      <h2 class="reveal d1">Lo nuevo en Techi.</h2>
+      <p class="lead reveal d2"><span id="novVer">Versión 6.3.4 para Windows y 1.9.4 para Android.</span> Techi se actualiza solo: no tienes que volver a descargarlo.</p>
+    </div>
+    <div class="cmds">
+      <div class="cmd reveal"><h3>🧠 Entiende mucho mejor</h3><p class="nov">Ahora trae su propia IA en el PC y en Android (gratuita, sin internet). Interpreta frases mal dichas o mal oídas, conversa de lo que quieras y responde a tema. Nuevos temas: cuentas, hora en otros países, recetas, traducir, capitales, clima de mañana y más.</p></div>
+      <div class="cmd reveal d1"><h3>👂 Escucha mejor</h3><p class="nov">Responde a «Techi, ¿cómo estás?» y a «¿cómo estás, Techi?». No se despierta con videos ni música. En el PC escucha aunque tu carpeta tenga tildes o «ñ», y puedes elegir tu micrófono. En el teléfono usa el reconocimiento sin internet de tu marca y quita el ruido de fondo.</p></div>
+      <div class="cmd reveal d2"><h3>🎨 Personalización</h3><p class="nov">Elige el color de Techi: azul, verde, naranja, amarillo, morado, rosado o celeste. Sus ojos, su boca y los detalles de la app cambian a tu color, en tema oscuro o claro. Y 15 voces naturales en el PC.</p></div>
+      <div class="cmd reveal"><h3>🔋 Menos batería</h3><p class="nov">Techi gasta menos mientras espera tu nombre: solo escucha con atención cuando hay voz cerca y su carita descansa cuando no la miras. En Xiaomi, Huawei, Samsung, Oppo y otras marcas te guía para que el teléfono no lo duerma.</p></div>
+      <div class="cmd reveal d1"><h3>📱 Más útil en el teléfono</h3><p class="nov">Abre tu app de música (YouTube Music, Spotify, Deezer…), abre apps en ventana flotante o pantalla dividida mientras juegas y puede escucharte con la pantalla bloqueada (si lo activas).</p></div>
+      <div class="cmd reveal d2"><h3>🔒 Más confianza</h3><p class="nov">Antes de pedir permisos te explica para qué es cada uno. Al comienzo solo pide micrófono y notificaciones. Tu voz se entiende dentro de tu equipo y no se guarda.</p></div>
     </div>
   </div>
 </section>
@@ -433,32 +517,38 @@ footer b{color:var(--text)}
   <div class="wrap">
     <div class="head"><h2 class="reveal">Preguntas frecuentes</h2></div>
     <div class="faq">
-      <details class="reveal"><summary>¿Techi me espía o graba lo que digo?</summary><p>No. Techi escucha para reaccionar cuando dices «Techi», pero tu voz se convierte en texto dentro de tu equipo y no se guarda ni se envía. Solo usa internet cuando le pides algo que lo necesita: el clima, una búsqueda, un video.</p></details>
+      <details class="reveal"><summary>¿Techi me espía, graba lo que digo o roba mis datos?</summary><p>No. Techi solo espera su nombre, «Techi», y eso ocurre dentro de tu equipo: tu voz se convierte en texto ahí mismo y el audio no se guarda ni se envía. No tiene cuentas, ni anuncios, ni rastreo, y TechSolutions.valpo no tiene servidores donde guardar tus conversaciones. Solo usa internet cuando le pides algo que lo necesita: el clima, Wikipedia, un mapa o buscar actualizaciones. Si quieres que no escuche nada, dile «Techi, descansa» y suelta el micrófono por completo.</p></details>
+      <details class="reveal"><summary>¿Qué inteligencia artificial usa? ¿Es ChatGPT o Gemini?</summary><p>No es ChatGPT ni Gemini, y no manda nada a la nube. Techi es un programa de TechSolutions.valpo: sus conversaciones y órdenes están programadas a mano, y entiende lo que dices por su significado con un modelo liviano que viene dentro de la app. Para escuchar y hablar usa piezas de código abierto y gratuitas que funcionan en tu equipo, sin internet (los créditos y licencias vienen con la app). No se entrenó con tus datos: solo aprende lo que tú le confirmas, y eso queda en tu equipo. Además, en el PC y en Android Techi trae su propia IA (Qwen2.5 de Alibaba Cloud, gratuita y de licencia Apache 2.0, con el motor llama.cpp): se descarga sola la primera vez (en el teléfono, con Wi-Fi) y funciona sin internet. Cuando una frase no es clara, la IA la interpreta.</p></details>
+      <details class="reveal"><summary>¿Puedo usar Techi junto con Gemini, Siri u otro asistente?</summary><p>Sí. Techi funciona aparte y no choca con otros asistentes. Si quieres usar Gemini o ChatGPT, dile «Techi, abre Gemini» y te lo abre.</p></details>
+      <details class="reveal"><summary>¿Para qué pide permisos en Android?</summary><p>Antes de pedir nada, Techi te explica cada permiso. Al comienzo pide solo dos: <b>micrófono</b> (para escucharte) y <b>notificaciones</b> (para tus recordatorios). Después, «mostrar sobre otras apps» para que la cápsula aparezca arriba. Contactos, llamadas y calendario los pide recién cuando le pides llamar a alguien o anotar algo. No pide ubicación, cámara, SMS ni acceso a tus fotos, y puedes quitar cualquier permiso en Ajustes › Apps › Techi.</p></details>
+      <details class="reveal"><summary>¿Cómo le pongo voz de hombre (o de mujer)?</summary><p>En el PC: Ajustes › Voz y escucha, elige una de las 15 voces (8 de hombre y 7 de mujer) o dile «Techi, pon voz de hombre». En Android: Ajustes › Voz de Techi, elige otra voz del teléfono o el tono «Grave (hombre)», o dile «Techi, pon voz de hombre».</p></details>
+      <details class="reveal"><summary>¿Techi solo responde si lo llamo?</summary><p>Sí. Reacciona cuando dices su nombre al comienzo («Techi, ¿cómo estás?») o al final de una frase corta («¿cómo estás, Techi?»). En Android, mientras suena un video o música en el teléfono no escucha su nombre, para no despertarse con lo que dicen en YouTube, TikTok o Instagram; ahí basta con tocar la cápsula. Puedes decir la orden de corrido, sin esperar: «Techi, pon música».</p></details>
       <details class="reveal"><summary>¿Cuánto cuesta?</summary><p>Hoy es gratis. Si te gusta, puedes invitarle un café para apoyar el proyecto.</p></details>
       <details class="reveal"><summary>¿Cuánto consume mi PC?</summary><p>Techi usa unos 55 MB y casi nada de procesador cuando está tranquilo. Su voz (unos 240 MB) y su oído (300 a 500 MB) se cargan cuando conversas y se liberan solos tras unos minutos sin hablar o cuando juegas. Puedes preguntarle «¿cuánto consumes?».</p></details>
       <details class="reveal"><summary>¿Cómo se actualiza?</summary><p>Solo. En PC descarga la versión nueva en segundo plano y se instala la próxima vez que lo abres. En Android la descarga y te pide tocar «Instalar» (Android siempre lo pide). Cada actualización va firmada: si alguien la altera, Techi no la instala.</p></details>
-      <details class="reveal"><summary>Techi no me escucha en el PC</summary><p>Abre Techi › Ajustes › Voz y escucha › «Revisar y reparar mi oído» (o escríbele «¿por qué no me escuchas?») y Techi se revisa y se arregla solo. Lo más común: 1) abriste Techi desde dentro del ZIP: haz clic derecho en el ZIP › «Extraer todo» y abre Techi.exe desde la carpeta extraída; 2) falta, o es antiguo, un componente gratuito de Microsoft (Visual C++): Techi te ofrece instalarlo o actualizarlo con un botón; 3) Windows bloquea el micrófono: Configuración › Privacidad y seguridad › Micrófono, activa el acceso y «aplicaciones de escritorio». Y recuerda decir «Techi» antes de pedirle algo.</p></details>
-      <details class="reveal"><summary>Mi teléfono no deja instalar el APK</summary><p>Prueba esto: 1) descarga Techi de nuevo desde esta página (la versión 1.9.1 o más nueva ya no pide permisos especiales); 2) si tenías un Techi antiguo, desinstálalo primero (también en «Segundo espacio» o «Apps duplicadas»); 3) si Play Protect muestra un aviso de app desconocida, toca «Más detalles» › «Instalar de todas formas». Nunca hace falta apagar Play Protect. 4) En Huawei, desactiva el «Modo puro». Si aún no se instala, escríbenos por WhatsApp.</p></details>
-      <details class="reveal"><summary>¿Quién hizo a Techi?</summary><p>Maikel Perera, de Tech Solutions, en Valparaíso, Chile. Soporte por WhatsApp +56 9 2231 0609 o Instagram @techsolutions.valpo.</p></details>
+      <details class="reveal"><summary>Techi no me escucha en el PC</summary><p>Primero actualiza a la versión 6.3.4 o más nueva: arregla el caso más común, cuando tu usuario o tu carpeta tienen tildes o «ñ» (por ejemplo «José» o «Begoña»). Luego abre Techi › Ajustes › Voz y escucha › «Revisar y reparar mi oído» (o escríbele «¿por qué no me escuchas?») y Techi se revisa y se arregla solo. Otras causas: 1) abriste Techi desde dentro del ZIP: haz clic derecho en el ZIP › «Extraer todo» y abre Techi.exe desde la carpeta extraída; 2) falta, o es antiguo, un componente gratuito de Microsoft (Visual C++): Techi te ofrece instalarlo con un botón; 3) Windows bloquea el micrófono: Configuración › Privacidad y seguridad › Micrófono, activa el acceso y «aplicaciones de escritorio». Y recuerda decir «Techi» antes de pedirle algo.</p></details>
+      <details class="reveal"><summary>¿Puedo cambiar el color de Techi?</summary><p>Sí. En Ajustes › Personalización elige su color: azul, celeste, verde, amarillo, naranja, morado o rosado. Cambian sus ojos, su boca, la cápsula y los detalles de la app, con el tema oscuro o el claro. También puedes decirle «Techi, ponte verde». El rojo no se ofrece porque es el color de las alertas.</p></details>
+      <details class="reveal"><summary>¿Gasta mucha batería? ¿Por qué a veces deja de escuchar?</summary><p>Techi gasta poco: solo escucha con atención cuando hay voz cerca, su carita casi no se redibuja cuando está quieta y su IA se apaga sola a los 3 minutos sin uso. Si deja de escucharte, casi siempre es el ahorro de batería de la marca (Xiaomi, Redmi, Huawei, Honor, Samsung, Oppo, Realme, Vivo, Nokia…): en Ajustes de Techi toca «Que tu teléfono no duerma a Techi» y te lleva a la pantalla correcta de tu teléfono.</p></details>
+      <details class="reveal"><summary>¿Funciona con el teléfono bloqueado?</summary><p>Sí, si lo activas: Techi › Ajustes › «Escucharme con la pantalla bloqueada». Te responde sobre la pantalla de bloqueo, y si le pides abrir una app te pide desbloquear. Viene apagado porque usa un poco más de batería.</p></details>
+      <details class="reveal"><summary>¿Abre YouTube Music u otra app de música?</summary><p>Sí. «Pon música» abre la app de música que tengas (YouTube Music, Spotify, Deezer o la del teléfono). Si usas varias, dile «mi app de música es YouTube Music». Y mientras juegas: «abre una ventana de WhatsApp», «abre Spotify en ventana flotante» o «abre Discord en pantalla dividida».</p></details>
+      <details class="reveal"><summary>¿Puede entenderme mejor si hay ruido?</summary><p>Sí. En el PC hay un «Oído preciso» opcional (Ajustes › Voz y escucha): entiende mejor con ruido y nombres difíciles, pero tarda un par de segundos más, así que se recomienda para PCs potentes. Es gratis (574 MB, una sola vez) y funciona sin internet. En Android, Techi usa el reconocimiento sin internet de tu teléfono y, si falta el español, le pide al teléfono descargarlo.</p></details>
+      <details class="reveal"><summary>Mi teléfono no deja instalar el APK («el paquete no es válido»)</summary><p>Si dice «el paquete no es válido» o «no se pudo analizar el paquete», el archivo se descargó dañado (pasa sobre todo al descargar desde el navegador de TikTok, Instagram o Facebook, o si la descarga se cortó). Bórralo, abre esta página en Chrome y descárgalo de nuevo esperando que termine. Si aún no se instala, prueba esto: 1) descarga Techi de nuevo desde esta página (la versión 1.9.1 o más nueva ya no pide permisos especiales); 2) si tenías un Techi antiguo, desinstálalo primero (también en «Segundo espacio» o «Apps duplicadas»); 3) si Play Protect muestra un aviso de app desconocida, toca «Más detalles» › «Instalar de todas formas». Nunca hace falta apagar Play Protect. 4) En Huawei, desactiva el «Modo puro». Si aún no se instala, escríbenos por WhatsApp.</p></details>
+      <details class="reveal"><summary>¿Quién hizo a Techi?</summary><p>Maikel Perera, de TechSolutions.valpo, en Valparaíso, Chile. Soporte por WhatsApp +56 9 2231 0609 o Instagram @techsolutions.valpo.</p></details>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>Creado por <b>Maikel Perera</b> · Tech Solutions · Valparaíso, Chile</span>
+    <span>Creado por <b>Maikel Perera</b> · TechSolutions.valpo · Valparaíso, Chile</span>
     <span><a href="https://www.instagram.com/techsolutions.valpo" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/56922310609" target="_blank" rel="noopener">WhatsApp</a> · <a href="privacidad.html">Privacidad</a></span>
   </div>
 </footer>
 
 <script>
-/* =====================================================================
-   CONFIGURACIÓN: cambia estos enlaces y vuelve a subir la página.
-   ===================================================================== */
-const GITHUB_USUARIO = "techsolutionsvalpo-techi";      // tu usuario de GitHub
-const GITHUB_REPO = "techi";                       // el repositorio donde subes las versiones
+const GITHUB_USUARIO = "techsolutionsvalpo-techi";
+const GITHUB_REPO = "techi";
 const PAGOS = [
-  // Pega aquí tus enlaces de pago (déjalos vacíos "" mientras no los tengas):
   { texto: "☕ Invitar un café · $5.000 CLP (Mercado Pago)", url: "" },
   { texto: "☕ Invitar un café a Techi (Ko-fi)", url: "https://ko-fi.com/techsolutions93278" }
 ];
@@ -472,7 +562,16 @@ fetch("version.json", {cache: "no-store"}).then(r => r.json()).then(v => {
   const p = JSON.parse(decodeURIComponent(escape(atob(v.payload))));
   if (p.windows) document.getElementById("verWin").textContent = "Versión " + p.windows.version + " · Windows 10 y 11";
   if (p.android) document.getElementById("verAnd").textContent = "Versión " + p.android.version + " · Android 8 o superior";
+  if (p.windows && p.android) document.getElementById("novVer").textContent = "Versión " + p.windows.version + " para Windows y " + p.android.version + " para Android" + (p.windows.notes ? ". " + p.windows.notes : ".");
 }).catch(() => {});
+
+// Navegadores dentro de apps (TikTok, Instagram, Facebook): ahí el APK suele bajar dañado → aviso para abrir en Chrome
+try {
+  const ua = navigator.userAgent || "";
+  if (/Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|BytedanceWebview|Bytedance|Snapchat|Twitter|Line\//i.test(ua)) {
+    const w = document.getElementById("inAppWarn"); if (w) w.hidden = false;
+  }
+} catch (e) {}
 
 // Botones de pago
 const pay = document.getElementById("payBtns");
@@ -536,8 +635,8 @@ const FEATS = [
   [ic('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>', "#38bdf8", "#0284c7"), "Llamadas y WhatsApp", "Escribe y llama a tus contactos. Si no tiene el número, te lo pide una vez y lo recuerda.", "«Mándale un mensaje a mamá que llego tarde»"],
   [ic('<path d="M12 2 2 22h20L12 2z"/><path d="M12 9v5M12 18h.01"/>', "#fb7185", "#e11d48"), "Emergencias y hogar", "Qué hacer si huele a gas, si tiembla, una quemadura, un baño tapado o una mancha difícil.", "«¿Qué hago si huele a gas?»"],
   [ic('<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>', "#fbbf24", "#d97706"), "Humor y conversación", "Chistes, opiniones, gustos propios y respuestas distintas cada vez. Nunca suena a robot.", "«Me gustan las cachapas, ¿a ti?»"],
-  [ic('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>', "#22d3ee", "#0891b2"), "Privacidad por diseño", "En el PC, la voz y la IA funcionan dentro de tu equipo. En Android, Techi usa el reconocimiento sin internet de tu teléfono; si tu teléfono no lo trae, usa su reconocedor de voz (Google), que puedes apagar. Tus datos se guardan solo en tu equipo, sin cuentas.", "Sin registro ni almacenamiento en la nube"],
-  [ic('<path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 6v3h8v-3c1-1 3-3 3-6a7 7 0 0 0-7-7z"/><path d="M9 21h6"/>', "#c4b5fd", "#7c3aed"), "IA local y gratuita (PC)", "Opcional: una IA que funciona en tu PC sin internet. Entiende frases mal dichas y conversa de lo que quieras. Créditos: llama.cpp (MIT) y Qwen2.5 (Apache 2.0).", "«¿Quién ganó el Mundial 2014?»"],
+  [ic('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>', "#22d3ee", "#0891b2"), "Privacidad por diseño", "Tu voz se entiende dentro de tu equipo, sin internet, en el PC y en Android. Sin cuentas, sin anuncios y sin rastreo: tus datos se guardan solo en tu equipo y los puedes borrar cuando quieras.", "Sin registro ni almacenamiento en la nube"],
+  [ic('<path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 6v3h8v-3c1-1 3-3 3-6a7 7 0 0 0-7-7z"/><path d="M9 21h6"/>', "#c4b5fd", "#7c3aed"), "IA propia, en PC y Android", "Techi trae su propia IA gratuita que funciona en tu equipo, sin internet: entiende frases mal dichas o mal oídas y conversa de lo que quieras. Se descarga sola la primera vez. Créditos: llama.cpp (MIT) y Qwen2.5 (Apache 2.0).", "«Abre el wasá» → abre WhatsApp"],
   [ic('<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>', "#fda4af", "#e11d48"), "Doctor de tu PC", "Detecta programas congelados y los cierra, drivers con fallas, pantallazos azules y su causa, virus y qué juego calienta tu equipo. Te pregunta antes de arreglar.", "«Diagnostica mi PC»"],
   [ic('<path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/>', "#86efac", "#16a34a"), "Modo niños", "Con un PIN que tú creas: más juguetón, y bloquea apagar, borrar, mensajes y contenido para adultos.", "Juegos, trivia y adivinanzas"],
   [ic('<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m22 9-6 6M16 9l6 6"/>', "#a5b4fc", "#4f46e5"), "Modo descanso", "Para grabar video, sacar fotos, en una llamada o en clase: Techi se esconde y suelta el micrófono hasta que lo despiertes. En PC y Android, por voz o con un botón.", "«Techi, tómate un descanso»"],
@@ -545,6 +644,22 @@ const FEATS = [
 ];
 document.getElementById("feats").innerHTML = FEATS.map((f, i) =>
   `<div class="feat reveal d${i % 3 + 1}">${f[0]}<h3>${f[1]}</h3><p>${f[2]}</p><div class="ex">${f[3]}</div></div>`).join("");
+
+// ---------- Qué le puedes pedir (ejemplos por tema) ----------
+const CMDS = [
+  ["💬 Conversar", ["Techi, ¿cómo estás?", "Cuéntame un chiste", "¿Qué opinas del anime?", "Estoy aburrido", "Dame ánimo", "Hoy es mi cumpleaños"]],
+  ["🎵 Música y videos", ["Pon música para bailar", "Búscame Dragon Ball en YouTube", "Pausa la música", "Siguiente canción", "Sube el volumen"]],
+  ["📅 Agenda y avisos", ["Recuérdame a las 5 llamar a mamá", "El 15 de julio tengo una fiesta", "¿Qué tengo mañana?", "Pon un temporizador de 10 minutos", "Pon un pomodoro"]],
+  ["📞 Contactos", ["Llama a mamá", "Mándale un WhatsApp a Juan que llego tarde", "Escríbele a mi amor", "Abre WhatsApp en pantalla dividida (Android)"]],
+  ["🖥 Tu PC", ["¿Cómo está mi PC?", "Diagnostica mi PC", "¿Qué programas consumen más?", "Limpia archivos temporales", "Ordena el escritorio", "¿Cómo puedo mejorar mi PC?"]],
+  ["📱 Tu teléfono", ["Enciende la linterna", "Abre la cámara", "Organiza mis pantallas", "Abre Discord en ventana flotante", "Toma una captura de pantalla"]],
+  ["🌦 Clima y datos", ["¿Va a llover mañana?", "¿Qué hora es en Japón?", "¿Cuántos días faltan para Navidad?", "¿Quién fue Gabriela Mistral?", "¿Cuál es la capital de Perú?", "¿Cómo llego a la Plaza Sotomayor?"]],
+  ["🧮 Cuentas y cocina", ["¿Cuánto es 25 por 4?", "El 15 por ciento de 20000", "Raíz cuadrada de 81", "Receta de lentejas", "¿Qué cocino hoy?", "Traduce gracias al inglés"]],
+  ["🏠 Ayuda en casa", ["¿Qué hago si huele a gas?", "Se me tapó el baño", "¿Cómo saco una mancha de vino?", "Me quemé con agua caliente", "¿Qué ropa me pongo hoy?"]],
+  ["😴 Descanso y voz", ["Techi, descansa", "Después hablamos", "Pon voz de mujer", "Pon voz de hombre", "¿Por qué no me escuchas?"]]
+];
+document.getElementById("cmds").innerHTML = CMDS.map((c, i) =>
+  `<div class="cmd reveal d${i % 3 + 1}"><h3>${c[0]}</h3><ul>${c[1].map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("");
 
 // ---------- Enlaces internos («Descargar gratis», «Descargar para Windows/Android»…) ----------
 // Llegan siempre a su destino: si algo de la página cambia de tamaño mientras baja (imágenes que terminan
